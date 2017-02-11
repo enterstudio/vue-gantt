@@ -1,0 +1,30 @@
+{
+  "name": "vue-gantt",
+  "version": "0.0.1",
+  "description": "Gantt chart component for Vue.js",
+  "main": "index.js",
+  "repository": "https://github.com/Toilal/vue-gantt",
+  "author": "Toilal <toilal.dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --env.dev",
+    "build.dist": "webpack",
+    "serve": "webpack-dev-server --env.dev --hot --inline",
+    "serve.dist": "webpack-dev-server"
+  },
+  "dependencies": {
+    "vue": "^2.1.10",
+    "vue-class-component": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/es6-collections": "^0.5.29",
+    "@types/es6-promise": "^0.0.32",
+    "@types/vue": "^2.0.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^5.0.1",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
