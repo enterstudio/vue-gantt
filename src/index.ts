@@ -1,9 +1,9 @@
 import * as Vue from 'vue';
 import Component from 'vue-class-component';
 
-
+require('./index.scss');
 @Component({
-  template: '<div>Coming soon...</div>'
+  template: require('./index.pug'),
 })
 export default class Gantt extends Vue {
 

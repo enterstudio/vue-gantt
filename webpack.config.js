@@ -21,7 +21,11 @@ module.exports = function (env) {
     },
     module: {
       rules: [
-        {test: /\.tsx?$/, loader: 'ts-loader'},
+        {
+          test: /\.tsx?$/,
+          loader: 'ts-loader',
+          exclude: '/node_modules/'
+        },
         {
           test: /\.scss$/,
           use: [{
@@ -31,6 +35,30 @@ module.exports = function (env) {
           }, {
             loader: "sass-loader" // compiles Sass to CSS
           }]
+        },
+        {
+          test: /\.html$/,
+          loader: 'html-loader',
+          query: {
+            minimize: true
+          }
+        },
+        {
+          test: /\.pug/,
+          use: [{
+            loader: 'apply-loader'
+          }, {
+            loader: 'pug-loader'
+          }
+          ]
+        },
+        {
+          test: /\.(woff|woff2|ttf|eot)$/,
+          loader: 'file-loader'
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          loader: 'file-loader'
         }
       ]
     },
