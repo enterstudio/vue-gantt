@@ -1,10 +1,3 @@
-import * as Vue from 'vue';
-import Component from 'vue-class-component';
+import Gantt from './components/gantt';
 
-require('./index.scss');
-@Component({
-  template: require('./index.pug'),
-})
-export default class Gantt extends Vue {
-
-}
+export default Gantt;
